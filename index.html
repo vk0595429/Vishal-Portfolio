@@ -145,6 +145,33 @@
       margin-top: 40px;
       color: #aaa;
     }
+    
+    /* Scroll to top button styles */
+    .scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #64ffda;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+
+    .scrollToTopBtn:hover {
+      background-color: #00f5a0;
+    }
+
+    .scrollToTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
   </style>
 </head>
 <body>
@@ -256,6 +283,29 @@
   <footer>
     <p>&copy; 2025 Vishal Kumar Chaurasia. All rights reserved.</p>
   </footer>
+
+  <button id="scrollToTopBtn" title="Go to top" class="scrollToTopBtn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
+      }
+    };
+
+    scrollToTopBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
 
 </body>
 </html>
