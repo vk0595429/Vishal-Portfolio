@@ -16,6 +16,7 @@
       line-height: 1.6;
       background-color: #0a0a1a;
       color: #f0f0f0;
+      scroll-behavior: smooth;
     }
     header {
       background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -44,6 +45,10 @@
       color: #64ffda;
       font-weight: bold;
       font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00f5a0;
     }
     section {
       padding: 40px 20px;
@@ -66,7 +71,10 @@
       padding: 15px;
       border-radius: 10px;
       text-align: center;
-      color: #fff;
+      transition: transform 0.3s;
+    }
+    .skill:hover {
+      transform: scale(1.1);
     }
     .skill i {
       font-size: 24px;
@@ -82,6 +90,10 @@
       display: flex;
       gap: 20px;
       align-items: center;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
     }
     .project-image {
       width: 200px;
@@ -96,6 +108,36 @@
     .project-info p, .project-info a {
       color: #ccc;
     }
+    .certification-card {
+      background: #1f1f3d;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .certification-card:hover {
+      transform: scale(1.05);
+    }
+    .certification-card a {
+      color: #64ffda;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+    .contact-icons a {
+      color: #64ffda;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #00f5a0;
+    }
     footer {
       background-color: #0f0f1f;
       text-align: center;
@@ -106,10 +148,12 @@
   </style>
 </head>
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -121,7 +165,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a passionate IT student deeply fascinated by data-driven decision making. With a focus on analytical dashboards and user-centric design, I thrive on transforming raw data into meaningful insights. Whether it's exploring new tech, visualizing KPIs, or simplifying business problems, I bring curiosity and creativity to every challenge.</p>
+    <p>I'm a passionate IT student deeply fascinated by data-driven decision making. With a focus on analytical dashboards and user-centric design, I thrive on transforming raw data into meaningful insights.</p>
   </section>
 
   <section id="skills">
@@ -146,8 +190,8 @@
       <img src="netflix.jpg" class="project-image" alt="Netflix Dashboard" />
       <div class="project-info">
         <h3>Netflix Data Analytics</h3>
-        <p>Interactive dashboard to analyze content trends and guide recommendations.</p>
-        <a href="https://github.com/vk0595429/Netflix-Data-Analytics" target="_blank">View on GitHub</a>
+        <p>Interactive dashboard analyzing Netflix content trends.</p>
+        <a href="https://github.com/vk0595429/Netflix-Data-Analytics" target="_blank">View Project</a>
       </div>
     </div>
 
@@ -155,8 +199,8 @@
       <img src="churn.jpg" class="project-image" alt="Churn Analysis" />
       <div class="project-info">
         <h3>Customer Churn Analysis</h3>
-        <p>Data profiling, visualization, and customer trend tracking using Python & Power BI.</p>
-        <a href="https://github.com/vk0595429/Customer-Churn-Analysis" target="_blank">View on GitHub</a>
+        <p>Data profiling, churn visualization using Python and Power BI.</p>
+        <a href="https://github.com/vk0595429/Customer-Churn-Analysis" target="_blank">View Project</a>
       </div>
     </div>
 
@@ -164,8 +208,8 @@
       <img src="supermart.jpg" class="project-image" alt="Super Mart Dashboard" />
       <div class="project-info">
         <h3>Super Mart Sales Dashboard</h3>
-        <p>Excel dashboard analyzing sales across various categories and regions.</p>
-        <a href="https://github.com/vk0595429/Supermart-Sales-Dashboard" target="_blank">View on GitHub</a>
+        <p>Excel dashboard analyzing regional and category-wise sales.</p>
+        <a href="https://github.com/vk0595429/Supermart-Sales-Dashboard" target="_blank">View Project</a>
       </div>
     </div>
 
@@ -173,22 +217,45 @@
       <img src="coffee.jpg" class="project-image" alt="Coffee Dashboard" />
       <div class="project-info">
         <h3>Coffee Sales Dashboard</h3>
-        <p>Excel-based dashboard highlighting monthly sales and product performance.</p>
-        <a href="https://github.com/vk0595429/Coffee-Shop-Dashboard" target="_blank">View on GitHub</a>
+        <p>Monthly sales performance tracking using Excel dashboard.</p>
+        <a href="https://github.com/vk0595429/Coffee-Shop-Dashboard" target="_blank">View Project</a>
       </div>
     </div>
 
   </section>
 
+  <section id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="certification-card">
+      <p>Introduction to Artificial Intelligence - IBM</p>
+      <a href="https://www.credly.com/badges/c2568710-5457-4d55-89bf-ae8f671ca5dd/public_url" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certification-card">
+      <p>Programming in Python - Udemy</p>
+      <a href="https://www.udemy.com/certificate/UC-ddbac6fe-402c-4f69-9700-f95736fe972c/" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certification-card">
+      <p>SQL for Data Analytics - Udemy</p>
+      <a href="https://www.udemy.com/certificate/UC-ef2b20cb-a7f7-4d22-a42c-606d4b1e032d/" target="_blank">View Certificate</a>
+    </div>
+
+  </section>
+
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:vk0595429@gmail.com">vk0595429@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vishal-kumar-ch" target="_blank">linkedin.com/in/vishal-kumar-ch</a></p>
-    <p>GitHub: <a href="https://github.com/vk0595429" target="_blank">github.com/vk0595429</a></p>
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:vk0595429@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/vishal-kumar-ch" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/vk0595429" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Vishal Kumar Chaurasia. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
